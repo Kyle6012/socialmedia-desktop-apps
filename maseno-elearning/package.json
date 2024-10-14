@@ -1,0 +1,34 @@
+{
+  "name": "maseno-elearning",
+  "version": "1.0.0",
+  "description": "An Electron application for an elaerning platform",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": ["Electron", "Application"],
+  "author": "Kyle Meshack Bahati",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^32.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "files": [
+    "assets/styles.css",
+    "splash.html",
+    "index.html",
+    "main.js"
+  ],
+  "build": {
+    "appId": "com.bealth.maseno",
+    "productName": "Maseno Elearning ",
+    "files": [
+      "build/**/*",
+      "assets/styles.css",
+      "splash.html",
+      "index.html",
+      "main.js"
+    ]
+  }
+}
