@@ -1,0 +1,12 @@
+directories:
+  output: dist
+  buildResources: build
+appId: com.bealth.maseno
+productName: 'Maseno Elearning '
+files:
+  - filter:
+      - build/**/*
+      - assets/styles.css
+      - splash.html
+      - main.js
+electronVersion: 32.2.0

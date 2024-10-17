@@ -1,0 +1,46 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #68151b;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+  
+.splash-container {
+    text-align: center;
+}
+  
+.splash-container p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+  
+.loader {
+    justify-content: center;
+    border: 12px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 12px solid #c42c05;
+    width: 80px;
+    height: 80px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+  
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+  
+webview {
+    width: 100%;
+    height: 100%;
+}
+  

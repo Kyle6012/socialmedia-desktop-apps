@@ -17,7 +17,6 @@
   "files": [
     "assets/styles.css",
     "splash.html",
-    "index.html",
     "main.js"
   ],
   "build": {
@@ -27,7 +26,6 @@
       "build/**/*",
       "assets/styles.css",
       "splash.html",
-      "index.html",
       "main.js"
     ]
   }

@@ -5,56 +5,56 @@ let mainWindow;
 let splashWindow;
 
 function createMainWindow() {
-    mainWindow = new BrowserWindow({
-        width: 1000,
-        height: 800,
-        WebPreferences: {
-            nodeIntegration: true,
-            contextIsolation: false,
-        }
-    });
+  mainWindow = new BrowserWindow({
+    width: 1200,
+    height: 800,
+    webPreferences: {
+      nodeIntegration: true,
+      contextIsolation: false,
+    }
+  });
 
-    mainWindpw.loadFile("index.html");
+  mainWindow.loadURL('https://www.instagram.com');
 
-    mainWindow.once('ready-to-show', () => {
-        splashWindow.close();
-        mainWindow.show();
-    });
+  mainWindow.once('ready-to-show', () => {
+    splashWindow.close();
+    mainWindow.show();
+  });
 }
 
-function createSplashWindow(){
-    splashWindow = new BrowserWindow({
-        width: 400,
-        height: 300,
-        frame: false,
-        alwaysOnTop: true,
-        transparent: true,
-        WebPreferences: {
-            nodeIntegration: true,
-            contextIsolation: false,
-        }
-    });
+function createSplashWindow() {
+  splashWindow = new BrowserWindow({
+    width: 400,
+    height: 400,
+    frame: false,
+    alwaysOnTop: true,
+    transparent: true,
+    webPreferences: {
+      nodeIntegration: true,
+      contextIsolation: false,
+    }
+  });
 
-    splashWindow.loadFile("splash.html");
-    splashWindow.show();
+  splashWindow.loadFile('splash.html');
+  splashWindow.show();
 }
 
 app.whenReady().then(() => {
-    createSplashWindow();
+  createSplashWindow();
 
-    setTimeout(() => {
-        createMainWindow();
-    }, 2000);
+  setTimeout(() => {
+    createMainWindow();
+  }, 3000);
+});
+
+app.on('window-all-closed', () => {
+  if (process.platform !== 'darwin') {
+    app.quit();
+  }
 });
 
 app.on('activate', () => {
-    if (process.platform !== 'darwin'){
-        app.quit();
-    }
-});
-
-app.on('activate', () => {
-    if (BrowserWindow.getAllWindows().length === 0) {
-        createMainWindow();
-    }
+  if (BrowserWindow.getAllWindows().length === 0) {
+    createMainWindow();
+  }
 });

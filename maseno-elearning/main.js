@@ -14,7 +14,7 @@ function createMainWindow() {
     }
   });
 
-  mainWindow.loadFile('index.html');
+  mainWindow.loadURL('https://elearning.maseno.ac.ke');
 
   mainWindow.once('ready-to-show', () => {
     splashWindow.close();
@@ -25,7 +25,7 @@ function createMainWindow() {
 function createSplashWindow() {
   splashWindow = new BrowserWindow({
     width: 400,
-    height: 300,
+    height: 400,
     frame: false,
     alwaysOnTop: true,
     transparent: true,
